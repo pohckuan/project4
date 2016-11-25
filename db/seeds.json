@@ -1,0 +1,20 @@
+[
+
+  {
+    "name": "Tuna Sushi",
+    "desc": "Raw tuna on sushi rice",
+    "preptime": "30 mins",
+    "cooktime": "30mins",
+    "ingredient": ["1 cup of rice", "1 lb of tuna"],
+    "direction":["slice tuna", "place tuna on top of rice"]
+  },
+  {
+    "name": "Pasta",
+    "desc": "Italian dish",
+    "preptime": "20 mins",
+    "cooktime": "30mins",
+    "ingredient": ["1 box of thin spaghetti", "10 meetballs"],
+    "direction":["boil spaghetti", "cook with sauce"]
+
+  }
+]
