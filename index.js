@@ -36,3 +36,15 @@ app.get("/api/recipes", function(req, res){
     res.json(recipes)
   })
   });
+
+  app.post("/recipes", function(req, res){
+    var split = req.body.recipe.ingredient.split('\r\n')
+    var splitdirection = req.body.recipe.direction.split('\r\n')
+    var newrecipe = req.body.recipe
+    newrecipe.ingredient = split
+    newrecipe.direction = splitdirection
+    console.log(newrecipe)
+  Recipe.create(newrecipe).then(function(recipe){
+    res.redirect(`recipes/${recipe.name}`);
+    });
+});
