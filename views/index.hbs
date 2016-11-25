@@ -22,7 +22,9 @@
     <li>{{direction}}</li>
   {{/each}}
 </ul>
-<button type="submit"><a href="/recipes">Delete</a></button>
+<form action="/recipes/{{recipe.name}}/delete" method="post">
+  <button type="submit">Delete</button>
+</form>
 {{/each}}
 
 <form action="/recipes" method="post">

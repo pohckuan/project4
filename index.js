@@ -75,7 +75,7 @@ app.post("/recipes/:name", function(req, res){
   })
 })
 
-app.put("api/recipes/:name", function(req, res){
+app.put("/api/recipes/:name", function(req, res){
   var split = req.body.recipe.ingredient.split('\r\n')
   var splitdirection = req.body.recipe.direction.split('\r\n')
   var newrecipe = req.body.recipe
@@ -84,5 +84,17 @@ app.put("api/recipes/:name", function(req, res){
   Recipe.findOneAndUpdate({name: req.params.name}, newrecipe, {new: true})
   .then(function(recipe){
     res.json(recipe)
+  })
+})
+
+app.post("/recipes/:name/delete", function(req, res){
+  Recipe.findOneAndRemove({name: req.params.name}).then(function(){
+    res.redirect("/recipes")
+  })
+})
+
+app.delete("/api/recipes/:name", function(req, res){
+  Recipe.findOneAndRemove({name: req.params.name}).then(function(){
+    res.json({success: true})
   })
 })
