@@ -1,0 +1,37 @@
+<h1>hello</h1>
+{{#each recipes as |recipe index|}}
+
+<h2><a href="/recipes/{{recipe.name}}">{{recipe.name}}</a></h2>
+<h3>{{recipe.desc}}</h3>
+<p>
+  {{recipe.preptime}}
+</p>
+<p>
+  {{recipe.cooktime}}
+</p>
+<h3>Ingredients:</h3>
+<ul>
+  {{#each recipe.ingredient as | ingredient i | }}
+    <li>{{ingredient}}</li>
+  {{/each}}
+</ul>
+
+<h3>Directions:</h3>
+<ul>
+  {{#each recipe.direction as | direction i | }}
+    <li>{{direction}}</li>
+  {{/each}}
+</ul>
+<button type="submit"><a href="/recipes">Delete</a></button>
+{{/each}}
+
+<form action="/recipes" method="post">
+  <input type="text" name="recipe[name]" placeholder="Recipe Name"><br>
+  <input type="text" name="recipe[desc]" placeholder="Description"><br>
+  <input type="text" name="recipe[preptime]" value="" placeholder="Prep Time"><br>
+  <input type="text" name="recipe[cooktime]" value="" placeholder="Cook Time"><br>
+  <textarea name="recipe[ingredient]" rows="8" cols="40" placeholder="Enter ingredients"></textarea><br>
+  <textarea name="recipe[direction]" rows="8" cols="40" placeholder="Enter Directions"></textarea>
+
+  <button type="submit"> Create</button>
+</form>
