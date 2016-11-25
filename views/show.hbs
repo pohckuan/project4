@@ -1,0 +1,39 @@
+{{#unless recipe}}
+<h2>This recipe can't be found!</h2>
+{{else}}
+<h2>{{recipe.name}}</h2>
+<h3>{{recipe.desc}}</h3>
+<p>
+  {{recipe.preptime}}
+</p>
+<p>
+  {{recipe.cooktime}}
+</p>
+<h3>Ingredients:</h3>
+<ul>
+  {{#each recipe.ingredient as | ingredient i | }}
+    <li>{{ingredient}}</li>
+  {{/each}}
+</ul>
+
+<h3>Directions:</h3>
+<ul>
+  {{#each recipe.direction as | direction i | }}
+    <li>{{direction}}</li>
+  {{/each}}
+</ul>
+
+
+{{/unless}}
+
+
+<form action="/recipes/{{recipe.name}}" method="post">
+  <input type="text" name="recipe[name]" value="{{recipe.name}}" placeholder="Recipe Name"><br>
+  <input type="text" name="recipe[desc]" value="{{recipe.desc}}" placeholder="Description"><br>
+  <input type="text" name="recipe[preptime]"  value="{{recipe.preptime}}" placeholder="Prep Time"><br>
+  <input type="text" name="recipe[cooktime]" value="{{recipe.cooktime}}" placeholder="Cook Time"><br>
+  <textarea name="recipe[ingredient]">{{recipe.ingredient}}</textarea><br>
+  <textarea name="recipe[direction]">{{recipe.direction}}</textarea>
+
+  <button type="submit"> Edit</button>
+</form>

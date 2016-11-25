@@ -48,3 +48,17 @@ app.get("/api/recipes", function(req, res){
     res.redirect(`recipes/${recipe.name}`);
     });
 });
+
+app.get("/recipes/:name", function(req, res){
+  Recipe.findOne({name: req.params.name}).then(function(recipe){
+    res.render("show", {
+      recipe: recipe
+    })
+  })
+})
+
+app.get("/api/recipes/:name", function(req, res){
+  Recipe.findOne({name: req.params.name}).then(function(recipe){
+    res.json(recipe)
+  })
+})
