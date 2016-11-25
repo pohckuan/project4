@@ -62,3 +62,27 @@ app.get("/api/recipes/:name", function(req, res){
     res.json(recipe)
   })
 })
+
+app.post("/recipes/:name", function(req, res){
+  var split = req.body.recipe.ingredient.split('\r\n')
+  var splitdirection = req.body.recipe.direction.split('\r\n')
+  var newrecipe = req.body.recipe
+  newrecipe.ingredient = split
+  newrecipe.direction = splitdirection
+  Recipe.findOneAndUpdate({name: req.params.name}, newrecipe, {new: true})
+  .then(function(recipe){
+    res.redirect(`/recipes/${recipe.name}`)
+  })
+})
+
+app.put("api/recipes/:name", function(req, res){
+  var split = req.body.recipe.ingredient.split('\r\n')
+  var splitdirection = req.body.recipe.direction.split('\r\n')
+  var newrecipe = req.body.recipe
+  newrecipe.ingredient = split
+  newrecipe.direction= splitdirection
+  Recipe.findOneAndUpdate({name: req.params.name}, newrecipe, {new: true})
+  .then(function(recipe){
+    res.json(recipe)
+  })
+})

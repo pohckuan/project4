@@ -27,7 +27,7 @@
 {{/unless}}
 
 
-<form action="/recipes/{{recipe.name}}" method="post">
+<form action="api/recipes/{{recipe.name}}" method="post">
   <input type="text" name="recipe[name]" value="{{recipe.name}}" placeholder="Recipe Name"><br>
   <input type="text" name="recipe[desc]" value="{{recipe.desc}}" placeholder="Description"><br>
   <input type="text" name="recipe[preptime]"  value="{{recipe.preptime}}" placeholder="Prep Time"><br>
