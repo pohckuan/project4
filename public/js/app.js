@@ -11,15 +11,21 @@ angular
   ])
   .factory("Recipe", [
     "$resource",
-    RecipeFactory
+    Recipe
   ])
   .controller("indexCtrl", [
     "$state",
-    "RecipeFactory",
+    "Recipe",
     indexController
   ])
+  .controller("showCtrl", [
+    "$state",
+    "$stateParams",
+    "Recipe",
+    showController
+  ])
 
-function RecipeFactory($resource){
+function Recipe ($resource){
   return $resource("/api/recipes/:name", {}, {
     update: {method: "PUT"}
   })
@@ -37,8 +43,18 @@ function RouterFunction($stateProvider, $locationProvider, $urlRouterProvider){
       controller: "indexCtrl",
       controllerAs: "vm"
     })
+    .state("show", {
+      url: "/recipes/:name",
+      templateUrl: "/assets/ng-views/show.html",
+      controller: "showCtrl",
+      controllerAs: "vm"
+    })
 }
 
-function indexController($state, RecipeFactory){
+function indexController($state, Recipe){
   this.recipes = Recipe.query()
+}
+
+function showController($state, $stateParams, Recipe){
+  this.recipe = Recipe.get({name: $stateParams.name})
 }
