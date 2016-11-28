@@ -77,7 +77,6 @@ function newController($state, Recipe){
 }
 function showController($state, $stateParams, Recipe){
   this.recipe = Recipe.get({name: $stateParams.name})
-
   this.destroy = function(){
     this.recipe.$delete({name: $stateParams.name }).then(function(){
       $state.go("index")
