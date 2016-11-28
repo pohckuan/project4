@@ -26,14 +26,3 @@
   <button type="submit">Delete</button>
 </form>
 {{/each}}
-
-<form action="/recipes" method="post">
-  <input type="text" name="recipe[name]" placeholder="Recipe Name"><br>
-  <input type="text" name="recipe[desc]" placeholder="Description"><br>
-  <input type="text" name="recipe[preptime]" value="" placeholder="Prep Time"><br>
-  <input type="text" name="recipe[cooktime]" value="" placeholder="Cook Time"><br>
-  <textarea name="recipe[ingredient]" rows="8" cols="40" placeholder="Enter ingredients"></textarea><br>
-  <textarea name="recipe[direction]" rows="8" cols="40" placeholder="Enter Directions"></textarea>
-
-  <button type="submit"> Create</button>
-</form>

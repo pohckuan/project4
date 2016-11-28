@@ -25,6 +25,7 @@ angular
     showController
   ])
   .controller("newCtrl", [
+    "$state",
     "Recipe",
     newController
   ])
@@ -63,23 +64,23 @@ function RouterFunction($stateProvider, $locationProvider, $urlRouterProvider){
 
 function indexController($state, Recipe){
   this.recipes = Recipe.query()
-  this.newRecipe = new Recipe()
-  this.create = function(){
-    this.newRecipe.$save().then(function(recipe){
-      $state.go("show", {name: recipe.name})
-    })
-  }
-
 }
 
-function newController(Recipe){
+function newController($state, Recipe){
   this.newRecipe = new Recipe()
   this.create = function(){
     this.newRecipe.$save().then(function(recipe){
       $state.go("show", {name: recipe.name})
     })
+    console.log("saved")
   }
 }
 function showController($state, $stateParams, Recipe){
   this.recipe = Recipe.get({name: $stateParams.name})
+
+  this.destroy = function(){
+    this.recipe.$delete({name: $stateParams.name }).then(function(){
+      $state.go("index")
+    })
+  }
 }
