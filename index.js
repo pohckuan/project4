@@ -27,11 +27,11 @@ app.get("/api/recipes", function(req, res){
 
 
 app.post("/api/recipes", function(req, res){
-  var splitIngredients = req.body.ingredient.split('\n')
-  var splitDirections = req.body.direction.split('\n')
+  var splitIngredients = req.body.ingredient
+  var splitDirections = req.body.direction
   var newrecipe = req.body
-  newrecipe.ingredient = splitIngredients
-  newrecipe.direction = splitDirections
+  newrecipe.ingredient = splitIngredients.split('\n')
+  newrecipe.direction = splitDirections.split('\n')
   console.log(newrecipe)
   Recipe.create(newrecipe).then(function(recipe){
     res.json(recipe);
@@ -47,11 +47,12 @@ app.get("/api/recipes/:name", function(req, res){
 
 
 app.put("/api/recipes/:name", function(req, res){
-  var split = req.body.recipe.ingredient.split('\r\n')
-  var splitdirection = req.body.recipe.direction.split('\r\n')
-  var newrecipe = req.body.recipe
-  newrecipe.ingredient = split
-  newrecipe.direction= splitdirection
+  var splitIngredients = req.body.ingredient
+  var splitDirections = req.body.direction
+  var newrecipe = req.body
+  newrecipe.ingredient = splitIngredients.split('\n')
+  newrecipe.direction = splitDirections.split('\n')
+  console.log(newrecipe)
   Recipe.findOneAndUpdate({name: req.params.name}, newrecipe, {new: true})
   .then(function(recipe){
     res.json(recipe)

@@ -29,6 +29,13 @@ angular
     "Recipe",
     newController
   ])
+  .controller("editCtrl", [
+    "$state",
+    "$stateParams",
+    "Recipe",
+    editController
+  ]
+  )
 
 function Recipe ($resource){
   return $resource("/api/recipes/:name", {}, {
@@ -60,6 +67,12 @@ function RouterFunction($stateProvider, $locationProvider, $urlRouterProvider){
       controller: "showCtrl",
       controllerAs: "vm"
     })
+    .state("edit", {
+      url: "/recipes/:name/edit",
+      templateUrl: "/assets/ng-views/edit.html",
+      controller: "editCtrl",
+      controllerAs: "vm"
+    })
 }
 
 function indexController($state, Recipe){
@@ -69,6 +82,11 @@ function indexController($state, Recipe){
 function newController($state, Recipe){
   this.newRecipe = new Recipe()
   this.create = function(){
+    // if this.newRecipe.ingredient is falsey  or .direction is falsey,
+      // do not make the request
+        // display message to user why form submission was invalid
+
+    // otherwise, save as normal
     this.newRecipe.$save().then(function(recipe){
       $state.go("show", {name: recipe.name})
     })
@@ -80,6 +98,15 @@ function showController($state, $stateParams, Recipe){
   this.destroy = function(){
     this.recipe.$delete({name: $stateParams.name }).then(function(){
       $state.go("index")
+    })
+  }
+}
+
+function editController($state, $stateParams, Recipe){
+  this.recipe = Recipe.get({name: $stateParams.name})
+  this.update = function(){
+    this.recipe.$update({name: $stateParams.name}).then(function(){
+      $state.go("show", {name: recipe.name})
     })
   }
 }
