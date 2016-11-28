@@ -1,32 +1,110 @@
 [
 
   {
-    "name": "Tuna Sushi",
-    "desc": "Raw tuna on sushi rice",
-    "preptime": "30 mins",
-    "cooktime": "30mins",
-    "ingredient": ["1 cup of rice", "1 lb of tuna"],
-    "direction":["slice tuna", "place tuna on top of rice"]
+    "name": "Brownies",
+    "desc": "The best brownies I've ever had!",
+    "img":"http://images.media-allrecipes.com/userphotos/720x405/728522.jpg",
+    "preptime": "25 m",
+    "cooktime": "25 m",
+    "ingredient": ["1/2 cup white sugar", "2 tablespoons butter", "2 tablespoons water", "1 1/2 cups semisweet chocolate chips",
+    "2 eggs", "1/2 teaspoon vanilla extract",
+  "2/3 cup all-purpose flour", "1/4 teaspoon salt"],
+    "direction":["Preheat the oven to 325 degrees F (165 degrees C). Grease an 8x8 inch square pan.", "In a medium saucepan, combine the sugar, butter and water. Cook over medium heat until boiling. Remove from heat and stir in chocolate chips until melted and smooth. Mix in the eggs and vanilla. Combine the flour, baking soda and salt; stir into the chocolate mixture. Spread evenly into the prepared pan.",
+    "Bake for 25 to 30 minutes in the preheated oven, until brownies set up. Do not overbake! Cool in pan and cut into squares."]
   },
   {
-    "name": "Pasta",
-    "desc": "Italian dish",
-    "preptime": "20 mins",
-    "cooktime": "30mins",
-    "ingredient": ["1 box of thin spaghetti", "10 meetballs"],
-    "direction":["boil spaghetti", "cook with sauce"]
+    "name": "Tiramisu",
+    "desc": "Mascarpone custard layered with whipped cream and rum and coffee soaked ladyfingers.",
+    "img": "http://images.media-allrecipes.com/userphotos/720x405/864554.jpg",
+    "preptime": "35 m",
+    "cooktime": "10 m",
+    "ingredient": ["6 egg yolks", "3/4 cup white sugar", "2/3 cup milk", "1 1/4 cups heavy cream",
+    "1/2 teaspoon vanilla extract", "1 pound mascarpone cheese", "1/4 cup strong brewed coffee, room temperature", "2 tablespoons rum", "2 (3 ounce) packages ladyfinger cookies", "1 tablespoon unsweetened cocoa powder"],
+    "direction":["In a medium saucepan, whisk together egg yolks and sugar until well blended. Whisk in milk and cook over medium heat, stirring constantly, until mixture boils. Boil gently for 1 minute, remove from heat and allow to cool slightly. Cover tightly and chill in refrigerator 1 hour.",
+      "In a medium bowl, beat cream with vanilla until stiff peaks form. Whisk mascarpone into yolk mixture until smooth.",
+      "In a small bowl, combine coffee and rum. Split ladyfingers in half lengthwise and drizzle with coffee mixture.",
+      "Arrange half of soaked ladyfingers in bottom of a 7x11 inch dish. Spread half of mascarpone mixture over ladyfingers, then half of whipped cream over that. Repeat layers and sprinkle with cocoa. Cover and refrigerate 4 to 6 hours, until set."]
 
   },
   {
     "name": "Double Layer Pumpkin Cheesecake",
     "desc": "A great alternative to pumpkin pie, especially for those cheesecake fans out there. Serve topped with whipped cream.",
-    "preptime": "30 mins",
-    "cooktime": "40 mins",
+    "img": "http://images.media-allrecipes.com/userphotos/720x405/303675.jpg",
+    "preptime": "30 m",
+    "cooktime": "40 m",
     "ingredient": ["2 (8 ounce) packages cream cheese, softened", "1/2 cup white sugar","1/2 teaspoonvanilla extract", "2 eggs",
     "1 (9 inch) prepared graham cracker crust", "1/2 cup pumpkin puree", "1/2 teaspoon ground cinnamon", "1 pinch ground cloves", "1 pinch ground nutmeg", "1/2 cup frozen whipped topping, thawed"],
     "direction":["Preheat oven to 325 degrees F (165 degrees C).", "In a large bowl, combine cream cheese, sugar and vanilla. Beat until smooth. Blend in eggs one at a time. Remove 1 cup of batter and spread into bottom of crust; set aside.",
       "Add pumpkin, cinnamon, cloves and nutmeg to the remaining batter and stir gently until well blended. Carefully spread over the batter in the crust.",
        "Bake in preheated oven for 35 to 40 minutes, or until center is almost set. Allow to cool, then refrigerate for 3 hours or overnight. Cover with whipped topping before serving."]
 
-  }
+  },
+  {
+    "name": "Banana Bread",
+    "desc": "This banana bread is moist and delicious with loads of banana flavor! Friends and family love my recipe and say it's by far the best! It's wonderful toasted!! Enjoy!",
+    "img":"http://images.media-allrecipes.com/userphotos/250x250/914962.jpg",
+    "preptime":"15 m",
+    "cooktime": "1 h 5 m",
+    "ingredient": ["2 cups all-purpose flour", "1 teaspoon baking soda", "1/4 teaspoon salt", "1/2 cup butter",
+    "3/4 cup brown sugar", "2 eggs, beaten", "2 1/3 cups mashed overripe bananas"],
+    "direction": ["Preheat oven to 350 degrees F (175 degrees C). Lightly grease a 9x5 inch loaf pan.",
+    "In a large bowl, combine flour, baking soda and salt. In a separate bowl, cream together butter and brown sugar. Stir in eggs and mashed bananas until well blended. Stir banana mixture into flour mixture; stir just to moisten. Pour batter into prepared loaf pan.",
+  "Bake in preheated oven for 60 to 65 minutes, until a toothpick inserted into center of the loaf comes out clean. Let bread cool in pan for 10 minutes, then turn out onto a wire rack."]
+},
+{
+  "name":"Irish Cream Creme Brulee",
+  "desc": "I first had this at Epcot, and this is the recipe I came up with!",
+  "img": "http://images.media-allrecipes.com/userphotos/250x250/995355.jpg",
+  "preptime": "15 m",
+  "cooktime": "1 h 10 m",
+  "ingredient": ["2 cups heavy cream", "1/3 cup white sugar", "6 egg yolks", "1 teaspoon vanilla extract",
+  "3 tablespoons Irish cream liqueur",  "superfine sugar as needed"],
+  "direction": ["Preheat oven to 300 degrees F (150 degrees C). Place 6 ramekins on a towel set in a roasting pan at least 3 inches deep.",
+  "Stir together cream and sugar in a saucepan over medium heat, and cook until very hot, stirring until the sugar dissolves. Whisk together egg yolks, vanilla, and Irish cream until combined. Slowly add 1/3 of the hot cream, whisking it in 2 tablespoons at a time until incorporated. Once you have incorporated 1/3 of the cream, you can stir in the remaining hot cream without fear of the mixture curdling.",
+"Pour custard into the ramekins, then fill roasting pan with boiling hot water to come halfway up the sides of the ramekins. Bake in preheated oven until set, 50 to 60 minutes.",
+"Once the custard has set, place ramekins on a wire rack, and allow to cool to room temperature, about 1 hour. Cover, and refrigerate until cold, about 4 hours. Custards may remain refrigerated until ready to serve.",
+"Unwrap the custards, and sprinkle about 1 teaspoon of superfine sugar onto each. Gently shake the custards so the sugar coats the entire top surface, then tip the custards to a 45 degree angle and shake off excess sugar.",
+"Using a small hand torch, melt the sugar by making short passes over top of the custards with the flame not quite touching. Continue melting the sugar until it turns deep brown. Once the sugar has melted and turned to caramel, the cold custard underneath will harden the sugar into a crispy crust. Serve immediately. Alternatively, the sugar-dusted custards may be browned underneath the broiler in the oven."]
+},
+ {
+   "name": "Strawberry Trifle",
+   "desc": "It is so easy to make!",
+   "img": "http://images.media-allrecipes.com/userphotos/250x250/1891.jpg",
+   "preptime": "15 m",
+   "cooktime": "4 h 15 m",
+   "ingredient": ["1 (5 ounce) package instant vanilla pudding mix", "3 cups cold milk",
+   "1 (9 inch) angel food cake, cut in cubes", "4 bananas, sliced",  "1 (16 ounce) package frozen strawberries, thawed",
+ "1 (12 ounce) container frozen whipped topping, thawed"],
+ "direction": ["Prepare pudding with milk according to package directions. In a trifle bowl or other glass serving dish, layer half the cake pieces, half the pudding, half the bananas, half the strawberries and half the whipped topping. Repeat layers. Cover and chill in refrigerator 4 hours before serving."]
+ },
+ {
+   "name": "Texas Roadhouse Rolls",
+   "desc": " Texas Roadhouse Rolls! This copycat recipe is as close to the real thing as you can get. SO soft, buttery, and perfectly light!",
+   "img": "http://deliciouslyyum.com/wp-content/uploads/2014/02/roadhouserolls1.jpg",
+   "preptime": "1 h 15 m",
+   "cooktime": "15 m",
+   "ingredient": ["2 1/4 teaspoons (1 envelope) active dry yeast","1/4 cup lukewarm water","1 cup lukewarm milk",
+      "3 tablespoons melted butter, slightly cooled", "1/4 c. sugar", "4 cups all-purpose flour", "1 large egg",
+      "1 teaspoon salt", "melted butter for basting rolls"],
+    "direction": ["Combine yeast and lukewarm water in the bowl of your stand mixer and let stand for 10 minutes (until yeast starts to foam and bubble).",
+    "Add milk, melted butter and sugar to the yeast mixture and give it a good stir (using the paddle attachment). Add 1 cup to 1 1/2 cups of flour to make a medium batter. You're looking for a pancake-like consistency. Next, add egg and salt and incorporate well. Switch to the dough hook and with the mixer running on medium speed, add remaining flour. Continue mixing for 5 minutes or until dough is smooth.",
+  " Sprinkle some flour onto the counter and place dough on top. Let rest for 10 minutes. Meanwhile, grease another bowl with oil and place dough inside. Cover with a clean kitchen towel and place in a warm place until dough has doubled in size, about 1 hour.",
+  "Remove from oven and punch dough down. Place dough on floured surface and roll out into a square about 1/2 inch thick. Using a pizza cutter, cut dough into desired shapes. Place dough squares onto a parchment-lined baking sheet (or two, depending on how many rolls you end up with). Cover with a towel and let rise again until doubled in size, about 45-60 minutes.",
+"Preheat oven to 350 degrees and bake for 10-15 minutes or until tops are golden brown. Remove from oven and immediately baste with melted butter. Serve dinner rolls warm with additional butter."]
+ },
+ {
+   "name": "Japanese Cheesecake",
+   "desc": "Japanese Cheesecake is so soft and light! ",
+   "img": "http://1.bp.blogspot.com/_IF5HK3Sqp7M/S-kvFOA5e8I/AAAAAAAAHw0/ofUw-dz3MjM/s1600/Picture+012+copy.jpg",
+   "preptime": "20 m",
+   "cooktime": "60 m",
+   "ingredient": ["250ml milk", "250g cream cheese, cubed and softened at room temperature", " 60g butter, softened at room temperature",
+      "6 egg yolks", "55g cake flour", "20g corn flour", "1 lemon zest", "6 egg whites", "1/4 tsp cream of tartar", "130g caster sugar" ],
+  "direction": ["Preheat oven to 150C (302F).", "Use a large bowl, pour in milk. Place the bowl over simmering water. Don’t let the bottom of the bowl touch the water. Add cream cheese, stir occasionally, until completely dissolved and the mixture turns smooth. Stir in butter, till dissolved. Remove from heat. Let cool down a bit, then add the egg yolks and combine well. (Note: Make sure the mixture is not too hot, as you don’t want to cook the egg yolks at this stage.)",
+  "Combine cake flour and corn flour. Sift in the flours into the cream cheese mixture, a small amount at a time. Mix well between every addition, and make sure there aren’t any flour lumps. Stir in freshly grated zest. Set aside.",
+"Place egg whites in a large clean bowl. (Note: Make sure there’s no oil or water in the bowl at all.) Use an electric mixer to beat the egg whites for 3 minutes, then add cream of tartar and blend again. Pour sugar in the egg whites and blend until very stiff peaks form.",
+"Fold-in the egg whites into the cream cheese mixture gently with a rubber spatula just until all ingredients are incorporated. Do not stir or beat. For a better result, fold in egg whites with a small amount at a time, at least for 3 times.",
+"Pour the mixture into the two baking pans. Place the pans into another larger baking tray. Add hot water in the tray up to half way. Bake for about 50 to 60 minutes. Test with a needle or skewer that comes out clean.",
+"Turn off the oven. Leave the oven door ajar for 10 minutes. Remove from the oven and remove from the pans. Let cool completely on a wire rack. Chill in a fridge for about 3 hours. Enjoy!"]
+ }
 ]

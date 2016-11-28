@@ -24,6 +24,10 @@ angular
     "Recipe",
     showController
   ])
+  .controller("newCtrl", [
+    "Recipe",
+    newController
+  ])
 
 function Recipe ($resource){
   return $resource("/api/recipes/:name", {}, {
@@ -43,6 +47,12 @@ function RouterFunction($stateProvider, $locationProvider, $urlRouterProvider){
       controller: "indexCtrl",
       controllerAs: "vm"
     })
+    .state("new", {
+      url: "/recipes/new",
+      templateUrl: "/assets/ng-views/new.html",
+      controller: "newCtrl",
+      controllerAs: "vm"
+    })
     .state("show", {
       url: "/recipes/:name",
       templateUrl: "/assets/ng-views/show.html",
@@ -53,8 +63,23 @@ function RouterFunction($stateProvider, $locationProvider, $urlRouterProvider){
 
 function indexController($state, Recipe){
   this.recipes = Recipe.query()
+  this.newRecipe = new Recipe()
+  this.create = function(){
+    this.newRecipe.$save().then(function(recipe){
+      $state.go("show", {name: recipe.name})
+    })
+  }
+
 }
 
+function newController(Recipe){
+  this.newRecipe = new Recipe()
+  this.create = function(){
+    this.newRecipe.$save().then(function(recipe){
+      $state.go("show", {name: recipe.name})
+    })
+  }
+}
 function showController($state, $stateParams, Recipe){
   this.recipe = Recipe.get({name: $stateParams.name})
 }

@@ -1,6 +1,7 @@
 <!-- <h2>{{vm.recipes.length}} Recipes</h2> -->
 
-<div data-ng-repeat="recipe in vm.recipes">
+<div class="index" data-ng-repeat="recipe in vm.recipes">
     <h2><a data-ui-sref="show({name: recipe.name})">{{recipe.name}}</a></h2>
+    <a data-ui-sref="show({name: recipe.name})"><img src="{{recipe.img}}" alt="{{recipe.name}}" /></a>
 
 </div>

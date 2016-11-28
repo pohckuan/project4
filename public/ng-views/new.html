@@ -1,0 +1,9 @@
+<form>
+  <input type="text" data-ng-model="vm.newRecipe.name"  placeholder="Name"/><br>
+  <input type="text" data-ng-model="vm.newRecipe.desc"  placeholder="Description"/><br>
+  <input type="text" data-ng-model="vm.newRecipe.preptime"  placeholder="Prep Time"/><br>
+  <input type="text" data-ng-model="vm.newRecipe.cooktime"  placeholder="Cook Time"/><br>
+  <textarea type="text" data-ng-model="vm.newRecipe.ingredient" placeholder="Enter ingredient in each line"></textarea><br>
+  <textarea type="text" data-ng-model="vm.newRecipe.direction" placeholder="Enter direction in each line"></textarea><br>
+  <button type="button" data-ng-click="vm.create()"> Create</button>
+</form>

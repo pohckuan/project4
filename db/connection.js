@@ -2,6 +2,7 @@ var mongoose = require("mongoose")
 var RecipeSchema = new mongoose.Schema({
   name: String,
   desc: String,
+  img: String,
   preptime: String,
   cooktime: String,
   ingredient: [{
