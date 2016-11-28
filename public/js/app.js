@@ -105,8 +105,9 @@ function showController($state, $stateParams, Recipe){
 function editController($state, $stateParams, Recipe){
   this.recipe = Recipe.get({name: $stateParams.name})
   this.update = function(){
-    this.recipe.$update({name: $stateParams.name}).then(function(){
+    this.recipe.$update({name: $stateParams.name}).then(function(recipe){
       $state.go("show", {name: recipe.name})
     })
+    console.log("edited")
   }
 }

@@ -25,6 +25,11 @@ app.get("/api/recipes", function(req, res){
   })
   });
 
+  app.get("/api/recipes/:name", function(req, res){
+    Recipe.findOne({name: req.params.name}).then(function(recipe){
+      res.json(recipe)
+    })
+  })
 
 app.post("/api/recipes", function(req, res){
   var splitIngredients = req.body.ingredient
@@ -38,33 +43,23 @@ app.post("/api/recipes", function(req, res){
     });
 });
 
-
-app.get("/api/recipes/:name", function(req, res){
-  Recipe.findOne({name: req.params.name}).then(function(recipe){
-    res.json(recipe)
-  })
-})
-
-
-app.put("/api/recipes/:name", function(req, res){
-  var splitIngredients = req.body.ingredient
-  var splitDirections = req.body.direction
-  var newrecipe = req.body
-  newrecipe.ingredient = splitIngredients.split('\n')
-  newrecipe.direction = splitDirections.split('\n')
-  console.log(newrecipe)
-  Recipe.findOneAndUpdate({name: req.params.name}, newrecipe, {new: true})
-  .then(function(recipe){
-    res.json(recipe)
-  })
-})
-
-
 app.delete("/api/recipes/:name", function(req, res){
   Recipe.findOneAndRemove({name: req.params.name}).then(function(){
     res.json({success: true})
   })
 })
+
+
+
+app.put("/api/recipes/:name", function(req, res){
+  var newrecipe = req.body
+  Recipe.findOneAndUpdate({name: req.params.name}, newrecipe, {new: true}).then(function(recipe){
+    console.log(newrecipe)
+    res.json(recipe)
+  });
+})
+
+
 
 app.get("/*", function(req, res){
   res.render("recipes");

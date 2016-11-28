@@ -1,9 +1,9 @@
 <form>
-  <input type="text" value= {{vm.recipe.name}} /><br>
-  <input type="text" value= {{vm.recipe.desc}} /><br>
-  <input type="text" value= {{vm.recipe.preptime}} /><br>
-  <input type="text" value= {{vm.recipe.cooktime}} /><br>
-  <textarea type="text"  >{{vm.recipe.ingredient}}</textarea><br>
-  <textarea type="text" >{{vm.recipe.direction}}</textarea><br>
-  <button type="button" data-ng-click="vm.update()"> Edit</button>
+  <input type="text" ng-model= "vm.recipe.name" /><br>
+  <input type="text" ng-model= "vm.recipe.desc" /><br>
+  <input type="text" ng-model= "vm.recipe.preptime" /><br>
+  <input type="text" ng-model= "vm.recipe.cooktime" /><br>
+  <textarea ng-model= "vm.recipe.ingredient"></textarea><br>
+  <textarea ng-model= "vm.recipe.direction"></textarea><br>
+  <button data-ng-click="vm.update()"> Edit</button>
 </form>
