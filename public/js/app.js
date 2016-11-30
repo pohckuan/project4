@@ -109,14 +109,23 @@ function showController($state, $stateParams, Recipe){
     })
   }
   this.saveIngredient = function(){
-    
+    $('.list ul').append(`<li></li>`)
     console.log(this.recipe.ingredient)
   }
 }
 
 function editController($state, $stateParams, Recipe){
   this.recipe = Recipe.get({name: $stateParams.name})
-console.log(this.recipe.name)
+  this.recipe.$promise.then((data) => {
+    console.log(data)
+    let ingredient = data.ingredient.join('\n')
+    console.log(ingredient)
+    this.recipe.ingredient = ingredient
+
+    let direction = data.direction.join('\n')
+    console.log(direction)
+    this.recipe.direction = direction
+  })
   this.update = function(){
     this.recipe.$update({name: $stateParams.name}).then(function(recipe){
       $state.go("show", {name: recipe.name})

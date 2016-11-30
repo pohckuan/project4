@@ -4,9 +4,8 @@ img {
 
 }
 .index{
-  display: flex;
-  justify-content: space-between;
-  align-content: space-around;
+  display: inline-block;
+  justify-content: space-around;
 }
 
 .banner {
@@ -15,4 +14,9 @@ img {
   background-image: url("http://www.hopescookies.com/assets/images/slides/Hopescookies_banner_0729_940x311.jpg");
   background-size: cover;
   position: relative;
+}
+
+textarea {
+  width: 560px;
+  height: 144px;
 }
