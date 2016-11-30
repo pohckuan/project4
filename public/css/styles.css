@@ -4,5 +4,15 @@ img {
 
 }
 .index{
-  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  align-content: space-around;
+}
+
+.banner {
+  height: 300px;
+  width: 900px;
+  background-image: url("http://www.hopescookies.com/assets/images/slides/Hopescookies_banner_0729_940x311.jpg");
+  background-size: cover;
+  position: relative;
 }

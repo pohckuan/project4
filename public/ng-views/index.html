@@ -1,6 +1,12 @@
-<!-- <h2>{{vm.recipes.length}} Recipes</h2> -->
+<div class="banner">
 
-<div class="index" data-ng-repeat="recipe in vm.recipes">
+</div>
+
+
+<div >
+  <label>Search: <input ng-model="searchText"></label>
+</div>
+<div class="index" data-ng-repeat="recipe in vm.recipes | filter:searchText">
     <h2><a data-ui-sref="show({name: recipe.name})">{{recipe.name}}</a></h2>
     <a data-ui-sref="show({name: recipe.name})"><img src="{{recipe.img}}" alt="{{recipe.name}}" /></a>
 

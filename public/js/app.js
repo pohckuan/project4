@@ -34,9 +34,10 @@ angular
     "$stateParams",
     "Recipe",
     editController
-  ]
-  )
-
+  ])
+  // .controller("addToList",[
+  //   addToListController
+  // ])
 function Recipe ($resource){
   return $resource("/api/recipes/:name", {}, {
     update: {method: "PUT"}
@@ -49,6 +50,12 @@ function RouterFunction($stateProvider, $locationProvider, $urlRouterProvider){
       url: "/",
       templateUrl: "/assets/ng-views/welcome.html"
     })
+    // .state("grocerylist", {
+    //   url:"/recipes/grocerylist",
+    //   templateUrl: "/assets/ng-views/grocerylist.html",
+    //   controller: "addToList",
+    //   controllerAs: "vm"
+    // })
     .state("index", {
       url: "/recipes",
       templateUrl: "/assets/ng-views/index.html",
@@ -73,6 +80,7 @@ function RouterFunction($stateProvider, $locationProvider, $urlRouterProvider){
       controller: "editCtrl",
       controllerAs: "vm"
     })
+
 }
 
 function indexController($state, Recipe){
@@ -100,10 +108,15 @@ function showController($state, $stateParams, Recipe){
       $state.go("index")
     })
   }
+  this.saveIngredient = function(){
+    
+    console.log(this.recipe.ingredient)
+  }
 }
 
 function editController($state, $stateParams, Recipe){
   this.recipe = Recipe.get({name: $stateParams.name})
+console.log(this.recipe.name)
   this.update = function(){
     this.recipe.$update({name: $stateParams.name}).then(function(recipe){
       $state.go("show", {name: recipe.name})

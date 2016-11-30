@@ -52,9 +52,8 @@ app.delete("/api/recipes/:name", function(req, res){
 
 
 app.put("/api/recipes/:name", function(req, res){
-  var newrecipe = req.body
-  Recipe.findOneAndUpdate({name: req.params.name}, newrecipe, {new: true}).then(function(recipe){
-    console.log(newrecipe)
+console.log(req.body)
+  Recipe.findOneAndUpdate({name: req.params.name}, req.body, {new: true}).then(function(recipe){
     res.json(recipe)
   });
 })

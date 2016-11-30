@@ -13,12 +13,20 @@
 <h3>Ingredients:</h3>
 <ul data-ng-repeat= " ingredient in vm.recipe.ingredient"}}>
 
-  <p><li><input type="checkbox">{{ingredient}}</li></p>
+  <p><li><button ng-model="selectedIngredient" data-ng-click="vm.saveIngredient()" value="{{ingredient}}">{{ingredient}}</button></li></p>
 </ul>
 <h3>Directions</h3>
 <ul data-ng-repeat= " direction in vm.recipe.direction"}}>
   <p><li>{{direction}}</li></p>
 </ul>
-<button data-ng-click="vm.update()"><a data-ui-sref="edit{name: recipe.name}">Edit</a></button>
+<button data-ng-click="vm.update()"><a data-ui-sref="edit({name: vm.recipe.name})">Edit</a></button>
 <button data-ng-click="vm.destroy()">Delete this Recipe</button>
+</div>
+
+
+<div>
+  <h3>List</h3>
+<p>
+  {{selectedIngredient}}
+</p>
 </div>
