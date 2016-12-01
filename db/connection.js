@@ -18,5 +18,5 @@ mongoose.Promise = global.Promise
 // define model
 mongoose.model("Recipe", RecipeSchema)
 // define database
-mongoose.connect(process.env.MONGODB_URI)
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/project4')
 module.exports = mongoose;
