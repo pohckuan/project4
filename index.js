@@ -52,8 +52,13 @@ app.delete("/api/recipes/:name", function(req, res){
 
 
 app.put("/api/recipes/:name", function(req, res){
-console.log(req.body)
-  Recipe.findOneAndUpdate({name: req.params.name}, req.body, {new: true}).then(function(recipe){
+  var splitIngredients = req.body.ingredient
+  var splitDirections = req.body.direction
+  var newrecipe = req.body
+  newrecipe.ingredient = splitIngredients.split('\n')
+  newrecipe.direction = splitDirections.split('\n')
+
+  Recipe.findOneAndUpdate({name: req.params.name}, newrecipe, {new: true}).then(function(recipe){
     res.json(recipe)
   });
 })

@@ -1,21 +1,35 @@
-<div ng-if="vm.recipe">
-  <img src="{{vm.recipe.img}}" alt="{{vm.recipe.img}}" />
-  <h2>{{vm.recipe.name}}</h2>
-  <p>{{vm.recipe.desc}}</p>
-<h3>Prep Time:</h3>
- <p>
-   {{vm.recipe.preptime}}
- </p>
- <h3>Cook Time:</h3>
-  <p>
-    {{vm.recipe.cooktime}}
-  </p>
-<h3>Ingredients:</h3>
-<ul data-ng-repeat= " ingredient in vm.recipe.ingredient"}}>
+<div class="singleRecipe">
 
-  <li><button ng-model="selectedIngredient" data-ng-click="vm.saveIngredient()" value="{{ingredient}}">{{ingredient}}</button></li>
-</ul>
-<h3>Directions</h3>
+
+<div class="section1" ng-if="vm.recipe">
+  <div class="picture">
+    <img src="{{vm.recipe.img}}" alt="{{vm.recipe.img}}" id="singleImg"/>
+  </div>
+
+  <div class="nameDesc">
+    <h1>{{vm.recipe.name}}</h1>
+    <p>{{vm.recipe.desc}}</p>
+  </div>
+</div>
+
+  <div class="ingredient">
+    <h2>Ingredients:</h2>
+    <ul data-ng-repeat= " ingredient in vm.recipe.ingredient"}}>
+
+      <li>{{ingredient}}</li>
+    </ul>
+  </div>
+
+
+<h2>Directions</h2>
+<p>Prep Time:</p>
+<p>
+  {{vm.recipe.preptime}}
+</p>
+<p>Cook Time:</p>
+<p>
+  {{vm.recipe.cooktime}}
+</p>
 <ul data-ng-repeat= " direction in vm.recipe.direction"}}>
   <li>{{direction}}</li>
 </ul>
@@ -24,9 +38,4 @@
 </div>
 
 
-<div class="list">
-  <h3>List</h3>
-  <ul>
-    <li></li>
-  </ul>
 </div>

@@ -1,13 +1,17 @@
+
+<div class="body">
+
 <div class="banner">
 
 </div>
 
 
-<div >
-  <label>Search: <input ng-model="searchText"></label>
+<div class="search">
+  <label>Search: <input id="search" ng-model="searchText"></label>
 </div>
 <div class="index" data-ng-repeat="recipe in vm.recipes | filter:searchText">
-    <h2><a data-ui-sref="show({name: recipe.name})">{{recipe.name}}</a></h2>
-    <a data-ui-sref="show({name: recipe.name})"><img src="{{recipe.img}}" alt="{{recipe.name}}" /></a>
+    <h3><a data-ui-sref="show({name: recipe.name})">{{recipe.name}}</a></h3>
+    <a data-ui-sref="show({name: recipe.name})"><img src="{{recipe.img}}" alt="{{recipe.name}}" class="img" /></a>
 
+</div>
 </div>

@@ -1,7 +1,31 @@
-img {
-  height: 265px;
-  width: 300px;
+html{
+  background: #e2f7ff;
+}
 
+.body {
+  width: 1000px;
+  vertical-align: middle;
+  text-align: center;
+  margin: auto;
+  background: #efe4ff;
+}
+
+#search{
+  width: 350px;
+  height: 20px;
+  margin-top: 20px;
+  border: 2px solid black;
+}
+img{
+  height: 200px;
+  width: 250px;
+  padding: 10px;
+  border: 2px solid white;
+
+}
+
+img.img{
+  background-size: auto;
 }
 .index{
   display: inline-block;
@@ -19,4 +43,69 @@ img {
 textarea {
   width: 560px;
   height: 144px;
+}
+
+.newrecipe{
+  text-align: center;
+  margin: auto;
+}
+.box{
+  width: 520px;
+  height:100px;
+}
+
+#name{
+  width: 520px;
+  height:20px;
+}
+
+.abc{
+  display: flex;
+  vertical-align: middle;
+
+}
+
+.time{
+  width: 100px;
+}
+
+input{
+  border: 1px solid #8f9190;
+}
+
+.singleRecipe{
+  width: 1000px;
+  margin: auto;
+  background-color: white;
+}
+
+.picture{
+  float: right;
+}
+
+#singleImg{
+  width: 500px;
+  height: 300px;
+}
+
+.nameDesc{
+  text-align: center;
+}
+.section1{
+  height: 350px;
+}
+
+.nameDesc h1 {
+  color: blue;
+  font-variant: small-caps;
+}
+.nameDesc p{
+  line-height: 200%;
+  font-size: 18px;
+}
+.ingredient{
+  width: 600px;
+  height: 400px;
+  box-shadow: 10px 10px 5px grey;
+  background-color: white;
 }

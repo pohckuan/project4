@@ -50,12 +50,6 @@ function RouterFunction($stateProvider, $locationProvider, $urlRouterProvider){
       url: "/",
       templateUrl: "/assets/ng-views/welcome.html"
     })
-    // .state("grocerylist", {
-    //   url:"/recipes/grocerylist",
-    //   templateUrl: "/assets/ng-views/grocerylist.html",
-    //   controller: "addToList",
-    //   controllerAs: "vm"
-    // })
     .state("index", {
       url: "/recipes",
       templateUrl: "/assets/ng-views/index.html",
