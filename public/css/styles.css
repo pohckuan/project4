@@ -16,13 +16,15 @@ html{
   margin-top: 20px;
   border: 2px solid black;
 }
-img{
-  height: 200px;
-  width: 250px;
-  padding: 10px;
-  border: 2px solid white;
 
+.index img{
+  height: 210px;
+  width: 280px;
+  border-radius: 25%;
+  padding: 10px;
 }
+
+
 
 img.img{
   background-size: auto;
@@ -36,7 +38,7 @@ img.img{
   height: 300px;
   width: 900px;
   background-image: url("http://www.koenighome.de/wp-content/uploads/2011/12/xmas_banner2.jpg");
-  background-size: cover;
+  background-size: contain;
   position: relative;
 }
 
