@@ -2,10 +2,14 @@ html{
   background-image: url("https://www.grainchain.com/sites/default/files/flour-baking-background-with-egg,-rolling-pin-and-wheat-ear-000069728007_Medium_3.jpg");
   background-size: cover;
 }
-
+.banner{
+  width: 1000px;
+  background-image: url("http://www.culturedpearl.us/sites/culturedpearl.us/files/images/banner-1-desserts.jpg");
+  background-repeat: no-repeat;
+}
 .title h1{
   text-align: center;
-  font-family: "Tangerine", serif;
+  font-family: "Arial", serif;
   font-size: 48px;
   text-shadow: 4px 4px 4px #aaa;
 }
@@ -29,7 +33,7 @@ html{
   vertical-align: middle;
   text-align: center;
   margin: auto;
-  background: #efe4ff;
+  background: #ffe5eb;
 }
 
 #search{
