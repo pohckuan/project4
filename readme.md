@@ -17,4 +17,8 @@ Users authentication.
 
 Users can only create recipes when they are signed in.
 
-Users can only update and delete recipes they created. 
+Users can only update and delete recipes they created.
+
+Users can search for recipes.
+
+Users can saved recipes to their favorites collections.

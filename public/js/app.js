@@ -84,11 +84,6 @@ function indexController($state, Recipe){
 function newController($state, Recipe){
   this.newRecipe = new Recipe()
   this.create = function(){
-    // if this.newRecipe.ingredient is falsey  or .direction is falsey,
-      // do not make the request
-        // display message to user why form submission was invalid
-
-    // otherwise, save as normal
     this.newRecipe.$save().then(function(recipe){
       $state.go("show", {name: recipe.name})
     })
