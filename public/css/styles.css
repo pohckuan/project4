@@ -14,14 +14,14 @@ html{
   text-shadow: 4px 4px 4px #aaa;
 }
 
-.startbaking{
+.startbaking, .addnew{
   text-align: center;
+  margin: 10px;
 }
 
-.startbaking button{
+.startbaking button, .addnew button{
   height: 80px;
   width: 200px;
-  border-radius: 10%;
   background-color: white;
   font-size: 20px;
 
