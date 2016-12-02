@@ -1,6 +1,28 @@
 html{
-  background: #e2f7ff;
+  background-image: url("https://www.grainchain.com/sites/default/files/flour-baking-background-with-egg,-rolling-pin-and-wheat-ear-000069728007_Medium_3.jpg");
+  background-size: cover;
 }
+
+.title h1{
+  text-align: center;
+  font-family: "Tangerine", serif;
+  font-size: 48px;
+  text-shadow: 4px 4px 4px #aaa;
+}
+
+.startbaking{
+  text-align: center;
+}
+
+.startbaking button{
+  height: 80px;
+  width: 200px;
+  border-radius: 10%;
+  background-color: white;
+  font-size: 20px;
+
+}
+
 
 .body {
   width: 1000px;
@@ -37,8 +59,6 @@ img.img{
 .banner {
   height: 300px;
   width: 900px;
-  background-image: url("http://www.koenighome.de/wp-content/uploads/2011/12/xmas_banner2.jpg");
-  background-size: contain;
   position: relative;
 }
 
@@ -49,7 +69,29 @@ textarea {
 
 .newrecipe{
   text-align: center;
-  margin: auto;
+}
+.newrecipe input{
+  text-align: center;
+}
+.newrecipe button{
+  background-color: #4caf50;
+  padding: 15px 32px;
+  color: white;
+  font-size: 15px;
+}
+
+.ingredient h2{
+  text-decoration: underline;
+}
+.direction h2{
+  text-decoration: underline;
+}
+label{
+  font-size: 20px;
+}
+
+input{
+  margin: 10px;
 }
 .box{
   width: 520px;
@@ -61,11 +103,6 @@ textarea {
   height:20px;
 }
 
-.abc{
-  display: flex;
-  vertical-align: middle;
-
-}
 
 .time{
   width: 100px;
@@ -78,7 +115,6 @@ input{
 .singleRecipe{
   width: 1000px;
   margin: auto;
-  background-color: white;
 }
 
 .picture{
@@ -92,11 +128,8 @@ input{
 
 .nameDesc{
   text-align: center;
+  width:400px;
 }
-.section1{
-  height: 350px;
-}
-
 .nameDesc h1 {
   color: blue;
   font-variant: small-caps;
@@ -109,5 +142,30 @@ input{
   width: 600px;
   height: 400px;
   box-shadow: 10px 10px 5px grey;
+  background-color: white;
+}
+.direction, .picture img, .nameDesc, .timebox{
+  box-shadow: 10px 10px 5px grey;
+
+}
+.timebox{
+  display:flex;
+  flex-direction: row;
+  height: 70px;
+  width: 250px;
+}
+.timebox img{
+  height: 50px;
+  width: 50px;
+}
+.timebox p{
+  margin: 0px;
+}
+
+.prep, .cook{
+  padding: 10px;
+}
+
+.timebox, .nameDesc, .direction{
   background-color: white;
 }

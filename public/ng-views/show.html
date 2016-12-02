@@ -11,28 +11,38 @@
     <p>{{vm.recipe.desc}}</p>
   </div>
 </div>
-
+<div class="timebox">
+<div class="img">
+  <img src="https://cdn0.iconfinder.com/data/icons/feather/96/clock-128.png" alt="" />
+</div>
+<div class="prep">
+  <p>Prep Time</p>
+  <p>
+    {{vm.recipe.preptime}}
+  </p>
+</div>
+<div class="cook">
+  <p>Cook Time</p>
+  <p>
+    {{vm.recipe.cooktime}}
+  </p>
+</div>
+</div>
   <div class="ingredient">
-    <h2>Ingredients:</h2>
+    <h2>Ingredients</h2>
     <ul data-ng-repeat= " ingredient in vm.recipe.ingredient"}}>
 
       <li>{{ingredient}}</li>
     </ul>
   </div>
 
+<div class="direction">
+  <h2>Directions</h2>
+  <ul data-ng-repeat= " direction in vm.recipe.direction"}}>
+    <li>{{direction}}</li>
+  </ul>
+</div>
 
-<h2>Directions</h2>
-<p>Prep Time:</p>
-<p>
-  {{vm.recipe.preptime}}
-</p>
-<p>Cook Time:</p>
-<p>
-  {{vm.recipe.cooktime}}
-</p>
-<ul data-ng-repeat= " direction in vm.recipe.direction"}}>
-  <li>{{direction}}</li>
-</ul>
 <button data-ng-click="vm.update()"><a data-ui-sref="edit({name: vm.recipe.name})">Edit</a></button>
 <button data-ng-click="vm.destroy()">Delete this Recipe</button>
 </div>
