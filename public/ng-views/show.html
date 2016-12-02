@@ -42,9 +42,11 @@
     <li>{{direction}}</li>
   </ul>
 </div>
+<div class="showpage">
+  <button data-ng-click="vm.update()"><a data-ui-sref="edit({name: vm.recipe.name})">Edit</a></button>
+  <button data-ng-click="vm.destroy()">Delete this Recipe</button>
 
-<button data-ng-click="vm.update()"><a data-ui-sref="edit({name: vm.recipe.name})">Edit</a></button>
-<button data-ng-click="vm.destroy()">Delete this Recipe</button>
+</div>
 </div>
 
 

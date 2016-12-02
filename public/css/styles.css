@@ -73,7 +73,7 @@ textarea {
 .newrecipe input{
   text-align: center;
 }
-.newrecipe button{
+.newrecipe button, .showpage button{
   background-color: #4caf50;
   padding: 15px 32px;
   color: white;
