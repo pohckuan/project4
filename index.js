@@ -34,10 +34,10 @@ app.get("/api/recipes", function(req, res){
 app.post("/api/recipes", function(req, res){
   var splitIngredients = req.body.ingredient
   var splitDirections = req.body.direction
-  var newrecipe = req.body
-  newrecipe.ingredient = splitIngredients.split('\n')
-  newrecipe.direction = splitDirections.split('\n')
-  Recipe.create(newrecipe).then(function(recipe){
+  var newrecipebody = req.body
+  newrecipebody.ingredient = splitIngredients.split('\n')
+  newrecipebody.direction = splitDirections.split('\n')
+  Recipe.create(newrecipebody).then(function(recipe){
     res.json(recipe);
     });
 });

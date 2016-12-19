@@ -87,7 +87,7 @@ function newController($state, Recipe){
     this.newRecipe.$save().then(function(recipe){
       $state.go("show", {name: recipe.name})
     })
-    console.log("saved")
+    console.log("save")
   }
 }
 function showController($state, $stateParams, Recipe){
